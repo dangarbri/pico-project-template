@@ -1,3 +1,4 @@
+include_directories(../pico-distance-sensor/include)
 add_executable(program
     main.cpp
 )
@@ -7,5 +8,5 @@ pico_enable_stdio_uart(program 0)
 
 pico_add_extra_outputs(program)
 
-target_link_libraries(program pico_stdlib)
+target_link_libraries(program pico_stdlib distance-sensor)
 
